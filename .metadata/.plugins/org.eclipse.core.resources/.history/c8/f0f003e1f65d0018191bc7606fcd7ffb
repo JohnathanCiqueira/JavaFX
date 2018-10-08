@@ -1,0 +1,59 @@
+package application;
+
+import javafx.beans.property.*;
+
+public class Contato {
+	
+	private SimpleStringProperty nome;
+	private SimpleStringProperty sobrenome;
+	private SimpleStringProperty email;
+	
+	public Contato() {
+		this.nome = new SimpleStringProperty("");
+		this.sobrenome = new SimpleStringProperty("");
+		this.email = new SimpleStringProperty("");
+	}
+	
+	
+	public Contato(String nome, String sobrenome, String email) {
+		this.nome = new SimpleStringProperty(nome);
+		this.sobrenome = new SimpleStringProperty(sobrenome);
+		this.email = new SimpleStringProperty(email);
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(SimpleStringProperty nome) {
+		this.nome = nome;
+	}
+
+
+	public SimpleStringProperty getSobrenome() {
+		return sobrenome;
+	}
+
+
+	public void setSobrenome(SimpleStringProperty sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+
+
+	public SimpleStringProperty getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(SimpleStringProperty email) {
+		this.email = email;
+	}
+	
+	
+	
+	
+	
+
+}

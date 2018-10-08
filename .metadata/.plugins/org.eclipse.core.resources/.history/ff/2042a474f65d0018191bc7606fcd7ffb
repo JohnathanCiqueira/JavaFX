@@ -1,0 +1,23 @@
+package application;
+
+import javafx.beans.property.*;
+
+public class Contato {
+	
+	private SimpleStringProperty nome;
+	private SimpleStringProperty sobrenome;
+	private SimpleStringProperty email;
+	
+	
+	public Contato(String nome, String sobrenome, String email) {
+		super();
+		this.nome = new SimpleStringProperty(nome);
+		this.sobrenome = new SimpleStringProperty(sobrenome);
+		this.email = new SimpleStringProperty(email);
+	}
+	
+	
+	
+	
+
+}

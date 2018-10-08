@@ -1,0 +1,45 @@
+package application;
+
+import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableView;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
+
+public class TabelaExemplo1 extends Application{
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		
+		//Layout
+		BorderPane noRaiz = new BorderPane();
+		
+		//Cena
+		Scene minhaCena = new Scene(noRaiz, 300, 200);
+		
+		//Cria a tabela
+		TableView<Contato> tabela = new TableView<>();
+		
+		//List dos dados
+		ObservableList<Contato> dados = FXCollections.observableArrayList();
+		
+		//Adiciona contatos a lista
+		dados.add(new Contato("João", "Silva", "silva@silva.com"));
+		dados.add(new Contato("Maria", "Souza", "ms@souza.com"));
+		dados.add(new Contato("Pedro", "Silva", "pedro@silva.com"));
+		
+		//Adicionar a cena ao palco
+		primaryStage.setScene(minhaCena);
+		
+		//Exibir o palco e sua(s) cena(s)
+		primaryStage.show();
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}
